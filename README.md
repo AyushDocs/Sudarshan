@@ -34,7 +34,7 @@ Sudarshan is a premium, high-security MFA (Multi-Factor Authentication) vault de
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/AyushDocs/Sudarshan
    cd Sudarshan
    ```
 

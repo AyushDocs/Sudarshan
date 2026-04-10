@@ -1,50 +1,82 @@
-# Welcome to your Expo app 👋
+# Sudarshan Vault ☸️
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Sudarshan is a premium, high-security MFA (Multi-Factor Authentication) vault designed with an absolute focus on privacy, offline-first reliability, and a sleek obsidian aesthetic.
 
-## Get started
+![Version](https://img.shields.io/badge/version-1.0.0--Alpha-black?style=for-the-badge)
+![Platform](https://img.shields.io/badge/platform-Android%20%7C%20iOS-white?style=for-the-badge)
+![Security](https://img.shields.io/badge/Security-Hardware--Backed-green?style=for-the-badge)
 
-1. Install dependencies
+## ✨ Features
 
+- **Offline-First Architecture**: Your secrets never touch the internet. All calculations and storage happen locally on your device.
+- **Vault Health Audit**: Real-time security scoring that helps you identify weak secrets or missing privacy settings.
+- **Hardware-Backed Encryption**: Utilizes device-specific secure enclaves for key storage.
+- **Flexible Import/Export**: Encrypted local backups and secure transfer codes for migrating between devices.
+- **Pure Privacy**: Screenshot protection and biometric auto-lock (FaceID/Fingerprint) support.
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Expo](https://expo.dev/) (React Native)
+- **State Management**: [Redux Toolkit](https://redux-toolkit.js.org/) with Redux Persist
+- **Storage**: [Expo SecureStore](https://docs.expo.dev/versions/latest/sdk/secure-store/)
+- **Styling**: Vanilla React Native StyleSheet with dynamic theme tokens
+- **Navigation**: [Expo Router](https://docs.expo.dev/router/introduction/) (File-based routing)
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18+)
+- npm or yarn
+- Expo Go (for development) or EAS CLI (for building)
+
+### Installation
+
+1. Clone the repository:
    ```bash
-   npm install
+   git clone <repository-url>
+   cd Sudarshan
    ```
 
-2. Start the app
-
+2. Install dependencies:
    ```bash
-   npx expo start
+   npm install --legacy-peer-deps
    ```
 
-In the output, you'll find options to open the app in a
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 📦 Building for Production
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+This project is configured for **EAS Build**.
 
-## Get a fresh project
+### Generate APK (Android)
 
-When you're ready, run:
-
+To generate a standalone APK for testing or side-loading:
 ```bash
-npm run reset-project
+npx eas-cli build -p android --profile preview
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 📥 Download Latest APK
+You can download the latest pre-built APK for Android here:
+[Download Sudarshan APK](https://expo.dev/accounts/ayushdubey28/projects/Sudarshan/builds/ea3db22d-e680-4c68-999b-5ba03fa8d656)
 
-## Learn more
+### Build for Play Store/App Store
+```bash
+npx eas-cli build -p android --profile production
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+## 🔒 Security Posture
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Sudarshan adheres to the following security standards:
+- **TOTP/HOTP**: Support for SHA1 (Standard), SHA256, and SHA512.
+- **No Telemetry**: No tracking, no analytics, no external pings.
+- **Local-Only Backups**: Backups are stored as encrypted JSON files in your internal storage.
 
-## Join the community
+## 📄 License
 
-Join our community of developers creating universal apps.
+Distributed under the MIT License. See `LICENSE` for more information.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
